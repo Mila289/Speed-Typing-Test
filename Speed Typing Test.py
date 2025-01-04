@@ -29,3 +29,21 @@ def speed_test():
            label_3.configure(text=f'Time: {round((end-start), 4)}s')
        else:
            label_3.configure(text='Wrong Input')
+
+
+button_1 = tkinter.Button(main_window, text='Done',
+                             command=check_result, width=12, bg='grey')
+   button_1.place(x=150, y=100)
+
+   button_2 = tkinter.Button(main_window, text='Try Again',
+                             command=speed_test, width=12, bg='grey')
+   button_2.place(x=250, y=100)
+
+   label_3 = tkinter.Label(main_window, text='', font='times 20')
+   label_3.place(x=10, y=300)
+
+   main_window.mainloop()
+
+
+if __name__ == '__main__':
+   speed_test()
